@@ -1,0 +1,33 @@
+store-locator-component.html line 10
+order-history-component.html line 87
+order-history-component.css line 8
+login-component.ts line 62
+login-component.html line 27
+
+404 not found page
+ng g c not-found
+not-found.html 
+<!--Coming-soon Area Start-->
+<div class="bg-white p-5">
+  <img src="assets/img/404.PNG" class="img-responsive mx-auto d-block">
+  <a [routerLink]='["/"]'><h4 class="p-3 text-center text-primary"><i class="fa fa-arrow-left"></i>&emsp;Go back</h4></a>
+</div>
+<!--Coming-soon End--> 
+app-routing.ts
+import { NotFoundComponent } from './not-found/not-found.component';
+
+{ path: '404', component: NotFoundComponent},
+{ path: '**', redirectTo: '/404'}
+
+product-component.ts line 210, line 40
+product-component.html line 106
+
+cart-component.html line 109, 117,125 *ngIf="salesOrderData != undefined"
+
+checkout-component.html line 126,130,139,147,182 *ngIf="salesOrderData != undefined"
+
+products-component.html line 10 (click)="loadHomeWithSlider()"
+products-component.ts add
+ loadHomeWithSlider(){
+    window.location.href="/";
+  }
